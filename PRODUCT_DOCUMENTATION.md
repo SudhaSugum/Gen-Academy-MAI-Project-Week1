@@ -134,6 +134,7 @@ The cleaned CSV contains normalized columns and derived row metrics. Other pages
 - Missing `currency` values default to USD. Confirm this before loading real data.
 - The dashboard is an analytics aid, not an accounting system or an automated campaign optimizer.
 
+
 ## Troubleshooting
 
 - **Missing columns:** check the required CSV column names. `conversions` can replace `orders` for legacy files.
