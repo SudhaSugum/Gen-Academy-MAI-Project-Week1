@@ -50,15 +50,19 @@ The **Campaign and business breakdowns** page groups results by campaign, produc
 
 Choose one or more metrics to chart by day. Available series are spend, revenue, orders, clicks, ROAS, and ROI. Counts and currency values are summed by day; ROAS and ROI are calculated from each day's totals.
 
-### Products & customer segments
+### Products & Customer Segments
 
-This page reads keyed rows from `data/products.csv` and `data/customer_segments.csv`. Both files include date, channel, and campaign keys, so the page applies the shared date, platform, and campaign filters before calculating the visible totals. Since the original data only contains aggregate values, the key-level splits are synthetic proportional allocations. Summing all keyed rows returns the original aggregate totals; individual date/channel/campaign values are modeled. Product/region/device filters continue to apply only to campaign data. Source-reported ROI is retained because its formula is not documented in the CSV.
+The **Products & Customer Segments** page reads keyed rows from `data/products.csv` and `data/customer_segments.csv`. Both files include date, channel, and campaign keys, so the page applies the shared date, platform, and campaign filters before calculating the visible totals. Since the original data only contains aggregate values, the key-level splits are synthetic proportional allocations. Summing all keyed rows returns the original aggregate totals; individual date/channel/campaign values are modeled. Product/region/device filters continue to apply only to campaign data. Source-reported ROI is retained because its formula is not documented in the CSV.
+
+The current sample allocations include August 2026 campaign keys as well as September and October keys. August product and segment values are modeled allocations of the same aggregate snapshots, not independently reported monthly totals.
+
+Use the page's **Metric Month** multi-select to choose one or more months from the rows available under the shared filters. It defaults to all available months. The selected months filter both product and customer-segment rows before the page calculates their KPI totals, group summaries, and CSV downloads. Select at least one month to display these metrics.
 
 ## Shared filters
 
 The keyed product and customer-segment allocations are generated against the campaign data cohort used for the supplied aggregate totals.
 
-The sidebar filters apply to campaign results across the pages. The project dataset has one **Data sources** option, **Combined campaign data**. On Products & customer segments, date, platform, and campaign selections also filter the keyed summary rows. Product, region, and device selections do not apply to those separate tables.
+The sidebar filters apply to campaign results across the pages. The project dataset has one **Data sources** option, **Combined campaign data**. On Products & Customer Segments, date, platform, and campaign selections also filter the keyed summary rows. Product, region, and device selections do not apply to those separate tables.
 
 - **Date range:** inclusive start and end dates.
 - **Data sources:** identify the campaign dataset being viewed. The checked-in file currently has one combined dataset choice.

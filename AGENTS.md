@@ -12,7 +12,7 @@ Before changing this project, read `SKILL.md`, `PRODUCT_SPEC.md`, and the releva
 ## Current dashboard design
 
 - The product is branded **E-commerce ROI Dashboard**. Keep the multipage structure and neutral canvas with a dark Dashboard title banner.
-- The Dashboard has a `Metric Month` multi-select that scopes its own metric panels inside the shared date range. Do not apply that selector to the other pages or the full cleaned-data preview.
+- The Dashboard has a `Metric Month` multi-select that scopes its own metric panels inside the shared date range. Do not apply that selector to other pages or the full cleaned-data preview. Products & Customer Segments has its own independent month multi-select that scopes both summary datasets, their metrics, and downloads.
 - Keep CSV quality/export controls and the full cleaned-data preview in the sidebar. The preview must show all normalized rows in a scrollable table and include the row count and date range; a first-rows-only preview can hide later months.
 - Preserve the Dashboard sections: six KPI cards with prior-period comparisons, weekly revenue/profit and insights, efficiency metrics, channel performance, purchase funnel, budget and target pacing, campaign opportunities, daily trend, and filterable campaign-day rows.
 

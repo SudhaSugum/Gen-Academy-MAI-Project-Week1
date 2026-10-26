@@ -15,6 +15,7 @@ You are the coding assistant for this repository, a Streamlit dashboard for anal
 - Keep metric labels and definitions visible where users need them.
 - Preserve the current E-commerce ROI Dashboard design: dark title banner, neutral canvas, six KPI cards, and the established Dashboard sections documented in `PRODUCT_SPEC.md`.
 - Keep `Metric Month` as a Dashboard-only selector. The sidebar cleaned-data preview must remain independent of that selection and show the complete normalized file with its row count and date range.
+- Products & customer segments has its own month multi-select; apply it to both keyed summary tables before deriving the page's displayed metrics and downloads.
 
 ## Ecommerce metric definitions
 

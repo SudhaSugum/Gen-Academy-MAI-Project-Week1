@@ -43,7 +43,7 @@ One CSV row represents the results for one date, platform, and campaign. Require
 
 The app accepts `conversions` as a legacy alias for `orders`, and normalizes `channel`, `ad_spend_usd`, and `revenue_usd` input aliases to `platform`, `spend`, and `revenue`. It loads an uploaded CSV first, then the canonical `data/campaign_data.csv`. The combined file uses `Combined campaign data` in `source_dataset`. The builder fills missing region/device categories from valid existing choices and estimates missing product and shipping costs using median cost rates from rows with supplied cost data. These rows are marked `Estimated` in `data_enrichment_status`; estimates are synthetic and should not be treated as verified business costs. Missing product values default to `All products`. USD is inferred from `_usd` monetary column names when loading a matching input directly. Revenue and spend must use the same currency and scale.
 
-The product and customer-segment CSVs include `date`, `channel`, and `campaign` keys so date, platform, and campaign filters can slice the Products & customer segments page. Because the original values are aggregate totals, the row-level key allocations are synthetic and proportionally distributed across matching campaign rows; the full keyed tables reconcile to the aggregate totals. Product/region/device filters do not slice these summary tables. Source ROI and acquisition-cost values are retained as supplied when their formulas are not defined.
+The product and customer-segment CSVs include `date`, `channel`, and `campaign` keys so date, platform, and campaign filters can slice the Products & Customer Segments page. Because the original values are aggregate totals, the row-level key allocations are synthetic and proportionally distributed across matching campaign rows; the full keyed tables reconcile to the aggregate totals. Product/region/device filters do not slice these summary tables. Source ROI and acquisition-cost values are retained as supplied when their formulas are not defined.
 
 ## Metric definitions
 
@@ -118,9 +118,10 @@ For any ratio, aggregate its numerator and denominator for the selected rows bef
 - Allow the user to select which metrics to chart.
 - Display only the selected metrics; ratio series such as ROI and ROAS must be calculated from each day's totals.
 
-### Products & customer segments
+### Products & Customer Segments
 
 - Show product performance from `data/products.csv` and customer-segment performance from `data/customer_segments.csv`.
+- Provide a multi-select `Metric Month` field populated from months available after the shared filters, defaulting to all available months. Apply the selection to both keyed summary tables before calculating KPI totals, grouped metrics, and downloads. Show a clear prompt when no month is selected.
 - Validate required columns and numeric fields, and show actionable messages when a summary file is missing or invalid.
 - Apply shared date, platform, and campaign filters to the keyed rows and calculate visible totals from the selected rows.
 - Explain that keyed breakdowns are synthetic proportional allocations of aggregate totals, not source-reported per-campaign results.

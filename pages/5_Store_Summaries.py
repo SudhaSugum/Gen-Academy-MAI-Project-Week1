@@ -1,16 +1,46 @@
 import streamlit as st
+import pandas as pd
 
 from src.data_ui import get_dashboard_data
 from src.metrics import format_money
 from src.business_data import load_customer_segment_summary, load_product_summary
 from src.filters import filter_by_campaign_keys
 
-st.title("Products & customer segments")
+st.title("Products & Customer Segments")
 _, filtered_ad_rows = get_dashboard_data()
 selection = st.session_state["campaign_filter_selection"]
+
+try:
+    product_source = filter_by_campaign_keys(load_product_summary(), selection)
+except (FileNotFoundError, ValueError) as exc:
+    product_source = None
+    st.error(f"Could not load product summary: {exc}")
+
+try:
+    segment_source = filter_by_campaign_keys(load_customer_segment_summary(), selection)
+except (FileNotFoundError, ValueError) as exc:
+    segment_source = None
+    st.error(f"Could not load customer-segment summary: {exc}")
+
+month_sources = [frame for frame in (product_source, segment_source) if frame is not None and not frame.empty]
+available_months = sorted({
+    period
+    for frame in month_sources
+    for period in pd.to_datetime(frame["date"], errors="coerce").dropna().dt.to_period("M").unique()
+})
+month_labels = {period: period.strftime("%b %Y") for period in available_months}
+selected_months = st.multiselect(
+    "Metric Month",
+    available_months,
+    default=available_months,
+    format_func=lambda period: month_labels[period],
+    key="store_summary_metrics_months",
+)
+selected_month_labels = ", ".join(month_labels[period] for period in selected_months)
 st.caption(
     f"Shared ad-performance filter: {selection['start']} to {selection['end']} "
-    f"({len(filtered_ad_rows):,} matching campaign rows)."
+    f"({len(filtered_ad_rows):,} matching campaign rows). "
+    f"Summary metrics show: {selected_month_labels or 'no months selected'}."
 )
 st.info(
     "Product and customer-segment totals are allocated across dated channel and campaign rows so the shared date, platform, and campaign filters can slice them. "
@@ -18,11 +48,19 @@ st.info(
     "Product, region, and device filters apply to campaign data, not these separate summaries."
 )
 
-try:
-    products = filter_by_campaign_keys(load_product_summary(), selection)
-except (FileNotFoundError, ValueError) as exc:
-    products = None
-    st.error(f"Could not load product summary: {exc}")
+if not selected_months:
+    st.info("Select at least one month to show product and customer-segment metrics.")
+    st.stop()
+
+
+def filter_selected_months(frame):
+    if "date" not in frame.columns:
+        return frame
+    result = frame.copy()
+    result["date"] = pd.to_datetime(result["date"], errors="coerce")
+    return result[result["date"].dt.to_period("M").isin(selected_months)]
+
+products = filter_selected_months(product_source) if product_source is not None else None
 
 if products is not None:
     st.subheader("Product performance")
@@ -60,11 +98,7 @@ if products is not None:
         )
         st.caption("Reported ROI is shown as supplied and does not vary by date, channel, or campaign allocation.")
 
-try:
-    segments = filter_by_campaign_keys(load_customer_segment_summary(), selection)
-except (FileNotFoundError, ValueError) as exc:
-    segments = None
-    st.error(f"Could not load customer-segment summary: {exc}")
+segments = filter_selected_months(segment_source) if segment_source is not None else None
 
 if segments is not None:
     st.subheader("Customer segment performance")

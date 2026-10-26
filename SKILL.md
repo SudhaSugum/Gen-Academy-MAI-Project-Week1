@@ -5,7 +5,7 @@ Use this guide when extending or maintaining this Streamlit e-commerce ROI dashb
 ## Project structure
 
 - `app.py` defines Streamlit page navigation.
-- `pages/` contains the branded Dashboard, E-commerce overview, Channel comparison, Campaign and business breakdowns, E-commerce trends, and Products & customer segments.
+- `pages/` contains the branded Dashboard, E-commerce overview, Channel comparison, Campaign and business breakdowns, E-commerce trends, and Products & Customer Segments.
 - `src/data_loader.py` loads and validates campaign CSVs, normalizes accepted input aliases, and derives row-level metrics.
 - `src/business_data.py` validates the keyed product and customer-segment allocation files.
 - `src/filters.py` provides shared date, source, platform, campaign, and business-dimension filters.
@@ -62,6 +62,7 @@ Calculate ratios from aggregated numerators and denominators for the selected ro
 - Keep README setup instructions, schema notes, and diagrams in sync with meaningful architecture or data contract changes.
 - Keep dashboard highlights and funnel summaries grounded in available fields; do not infer sessions, cart, or checkout counts when they are absent.
 - Keep the Dashboard's `Metric Month` multi-select scoped to dashboard calculations; shared sidebar date and dimension filters remain available across all pages.
+- Provide a separate `Metric Month` multi-select on Products & Customer Segments. Apply selected months to both keyed summary tables before rendering metrics and downloads; default to all available months after shared filters.
 - The `Preview cleaned data` control belongs in the sidebar, shows the complete normalized dataset in a scrollable table, and states the cleaned row count and date range. Do not limit it to the first rows, which can hide later months in date-sorted data.
 - Keep the Dashboard layout aligned with the current design: dark title banner, light neutral background, six KPI cards with prior-period deltas, weekly revenue/profit chart with insight panel, efficiency metrics, channel performance, purchase funnel, budget pacing, campaign opportunities, daily trend, and filterable campaign-day table.
 - Keep product and customer-segment allocation keys in their files and use the shared date/platform/campaign filters on those keyed rows. Preserve the synthetic-allocation disclosure.

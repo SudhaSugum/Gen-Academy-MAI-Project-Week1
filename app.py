@@ -25,6 +25,6 @@ pages = [
     st.Page("pages/2_Platform_Comparison.py", title="Channel comparison", icon="🛍️"),
     st.Page("pages/3_Campaign_Details.py", title="Campaign details", icon="📋"),
     st.Page("pages/4_Time_Series.py", title="E-commerce trends", icon="📉"),
-    st.Page("pages/5_Store_Summaries.py", title="Products & segments", icon="📦"),
+    st.Page("pages/5_Store_Summaries.py", title="Products & Customer Segments", icon="📦"),
 ]
 st.navigation(pages).run()

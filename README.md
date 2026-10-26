@@ -46,7 +46,7 @@ python scripts/add_business_summary_keys.py
 
 The app uses an uploaded campaign CSV first, then the canonical `data/campaign_data.csv`. The combined file uses `Combined campaign data` as its source label. Missing region and device values are assigned valid existing categories. Missing product costs are estimated from the median product-cost-to-revenue rate in rows with supplied costs; shipping costs use the median shipping cost per order. Estimated rows are labeled `Estimated` in `data_enrichment_status`. The builder normalizes and enriches the canonical file in place. The loader also accepts `channel`, `ad_spend_usd`, and `revenue_usd` input aliases, and the legacy `conversions` alias for `orders`.
 
-The `data/products.csv` and `data/customer_segments.csv` files power the Products & customer segments page. They include date, channel, and campaign keys. Run `python scripts/add_business_summary_keys.py` to distribute their aggregate totals across the matching campaign rows. This allows date, platform, and campaign filtering while preserving the full totals; individual key-level values are synthetic allocations. Source ROI values are retained where the source does not define their formula.
+The `data/products.csv` and `data/customer_segments.csv` files power the Products & Customer Segments page. They include date, channel, and campaign keys, including modeled August 2026 allocations. Run `python scripts/add_business_summary_keys.py` to distribute their aggregate totals across the matching campaign rows. This allows date, platform, campaign, and month filtering while preserving the full totals; individual key-level and monthly values are synthetic allocations. Source ROI values are retained where the source does not define their formula.
 
 Metrics include orders, click-to-order rate, average order value, cost per order, ROAS (`revenue / ad spend`), and ROI (`(revenue - ad spend) / ad spend`). Revenue and spend must use the same currency. Zero-spend ratios are shown as unavailable. The sample is illustrative and does not represent actual store performance.
 
@@ -56,6 +56,7 @@ Product and customer-segment values are distributed across keyed campaign-grain 
 
 - Branded Dashboard with a dark title banner, light neutral canvas, six KPI cards with prior-period changes, a weekly revenue/profit chart, data-derived insights, channel performance, and an ad-click-to-order summary.
 - The Dashboard's `Metric Month` multi-select scopes its metrics within the shared date range. Other pages continue to use the shared sidebar filters.
+- Products & Customer Segments has its own `Metric Month` multi-select, defaulting to all months available after shared filters; the selection scopes both summary tables, their displayed metrics, and downloads.
 - Campaign metrics use the canonical combined campaign dataset; product and customer summaries come from their separate aggregate CSVs.
 - Shared date, data source, platform, campaign, product, region, device, and single-currency filters.
 - Equal-length previous-period comparisons for spend, revenue, orders, ROAS, and ROI.
@@ -78,7 +79,7 @@ flowchart LR
     App --> Channel["Channel comparison"]
     App --> Details["Campaign details"]
     App --> Trends["E-commerce trends"]
-    App --> Store["Products & segments"]
+    App --> Store["Products & Customer Segments"]
 
     Upload["Uploaded CSV"] --> Loader["src/data_loader.py"]
     Default["data/campaign_data.csv"] --> Builder["scripts/build_campaign_data.py<br/>fill and normalize"]
@@ -107,7 +108,7 @@ flowchart LR
 
 ## Page request flow
 
-Each page loads the selected campaign source through the shared data UI helper, shows quality feedback and a preview/download option, applies synchronized sidebar filters, and renders its view. The Products & customer segments page also reads its keyed summary allocations and applies date, platform, and campaign filters. The dashboard compares the selected window with the previous equal-length window and evaluates configured targets.
+Each page loads the selected campaign source through the shared data UI helper, shows quality feedback and a preview/download option, applies synchronized sidebar filters, and renders its view. The Products & Customer Segments page also reads its keyed summary allocations and applies date, platform, and campaign filters. The dashboard compares the selected window with the previous equal-length window and evaluates configured targets.
 
 ```mermaid
 sequenceDiagram
