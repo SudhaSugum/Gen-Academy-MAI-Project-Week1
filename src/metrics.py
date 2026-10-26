@@ -6,7 +6,8 @@ def summarize(df: pd.DataFrame) -> dict:
     clicks = df["clicks"].sum()
     orders = df["orders"].sum()
     net_revenue = revenue - df["refunds"].fillna(0).sum() - df["discounts"].fillna(0).sum()
-    profit_available = not df.empty and df["product_cost"].notna().all() and df["shipping_cost"].notna().all()
+    cost_flag_complete = df["cost_data_available"].fillna(False).all() if "cost_data_available" in df.columns else True
+    profit_available = not df.empty and cost_flag_complete and df["product_cost"].notna().all() and df["shipping_cost"].notna().all()
     contribution_profit = (net_revenue - df["product_cost"].sum() - df["shipping_cost"].sum() - spend) if profit_available else None
     return {"spend": spend, "clicks": clicks, "orders": orders, "revenue": revenue,
             "roi": (revenue - spend) / spend if spend else None,
@@ -25,8 +26,9 @@ def compare_with_previous_period(raw_df: pd.DataFrame, current_df: pd.DataFrame,
     days = (end - start).days + 1
     previous_start, previous_end = start - timedelta(days=days), start - timedelta(days=1)
     previous = raw_df[raw_df["date"].dt.date.between(previous_start, previous_end)]
-    for column in ("platform", "campaign", "product", "region", "device", "currency"):
-        previous = previous[previous[column].astype(str).isin(selections[column])]
+    for column in ("platform", "campaign", "product", "region", "device", "currency", "source_dataset"):
+        if column in selections:
+            previous = previous[previous[column].astype(str).isin(selections[column])]
     return summarize(current_df), summarize(previous), (previous_start, previous_end)
 
 
@@ -59,9 +61,15 @@ def grouped_metrics(df: pd.DataFrame, dimensions) -> pd.DataFrame:
     additive = ["spend", "revenue", "orders", "impressions", "clicks", "refunds", "discounts", "product_cost", "shipping_cost"]
     aggregations = {column: (column, lambda series: series.sum(min_count=1)) for column in additive if column in df.columns}
     grouped = df.groupby(dimensions, as_index=False).agg(**aggregations)
-    completeness = df.groupby(dimensions, as_index=False).agg(
+    if "cost_data_available" in df.columns:
+        cost_availability = df["cost_data_available"].fillna(False)
+    else:
+        cost_availability = df[["product_cost", "shipping_cost"]].notna().all(axis=1)
+    frame_with_cost_availability = df.assign(_cost_data_available=cost_availability)
+    completeness = frame_with_cost_availability.groupby(dimensions, as_index=False).agg(
         product_cost_complete=("product_cost", lambda series: series.notna().all()),
         shipping_cost_complete=("shipping_cost", lambda series: series.notna().all()),
+        cost_data_complete=("_cost_data_available", "all"),
     )
     grouped = grouped.merge(completeness, on=dimensions, how="left")
     grouped["roi"] = (grouped["revenue"] - grouped["spend"]) / grouped["spend"].where(grouped["spend"] != 0)
@@ -69,9 +77,9 @@ def grouped_metrics(df: pd.DataFrame, dimensions) -> pd.DataFrame:
     grouped["average_order_value"] = grouped["revenue"] / grouped["orders"].where(grouped["orders"] != 0)
     grouped["cost_per_order"] = grouped["spend"] / grouped["orders"].where(grouped["orders"] != 0)
     grouped["click_to_order_rate"] = grouped["orders"] / grouped["clicks"].where(grouped["clicks"] != 0)
-    has_profit_inputs = grouped["product_cost_complete"] & grouped["shipping_cost_complete"]
+    has_profit_inputs = grouped["product_cost_complete"] & grouped["shipping_cost_complete"] & grouped["cost_data_complete"]
     net = grouped["revenue"] - grouped["refunds"].fillna(0) - grouped["discounts"].fillna(0)
     grouped["contribution_profit_after_ads"] = (net - grouped["product_cost"] - grouped["shipping_cost"] - grouped["spend"]).where(has_profit_inputs)
     grouped["contribution_margin_after_ads"] = grouped["contribution_profit_after_ads"] / net.where(net != 0)
-    grouped = grouped.drop(columns=["product_cost_complete", "shipping_cost_complete"])
+    grouped = grouped.drop(columns=["product_cost_complete", "shipping_cost_complete", "cost_data_complete"])
     return grouped

@@ -1,0 +1,481 @@
+date,channel,campaign,segment,orders,revenue_usd,avg_order_value_usd,acquisition_cost_per_order_usd,profit_usd,profit_per_order_usd
+2026-09-26,Google Ads,Search - Brand,New,5,269.85,55.00,19.50,62.88,12.82
+2026-09-26,Google Ads,Search - Brand,Returning,2,173.79,69.86,4.88,71.52,28.75
+2026-09-26,Google Ads,Search - Generic,New,5,294.66,55.00,19.50,68.67,12.82
+2026-09-26,Google Ads,Search - Generic,Returning,3,189.78,69.86,4.88,78.10,28.75
+2026-09-26,Google Ads,Shopping,New,8,455.54,55.00,19.50,106.16,12.82
+2026-09-26,Google Ads,Shopping,Returning,4,293.38,69.86,4.88,120.74,28.75
+2026-09-26,Meta Ads,Prospecting - Lookalike,New,11,633.01,55.00,19.50,147.51,12.82
+2026-09-26,Meta Ads,Prospecting - Lookalike,Returning,6,407.69,69.86,4.88,167.78,28.75
+2026-09-26,Meta Ads,Retargeting - Warm,New,12,693.65,55.00,19.50,161.65,12.82
+2026-09-26,Meta Ads,Retargeting - Warm,Returning,7,446.75,69.86,4.88,183.85,28.75
+2026-09-26,Meta Ads,Video Views,New,5,249.88,55.00,19.50,58.23,12.82
+2026-09-26,Meta Ads,Video Views,Returning,2,160.93,69.86,4.88,66.23,28.75
+2026-09-26,TikTok Ads,Creator Collab,New,2,106.41,55.00,19.50,24.80,12.82
+2026-09-26,TikTok Ads,Creator Collab,Returning,1,68.53,69.86,4.88,28.20,28.75
+2026-09-26,TikTok Ads,Spark Ads,New,5,261.56,55.00,19.50,60.95,12.82
+2026-09-26,TikTok Ads,Spark Ads,Returning,2,168.45,69.86,4.88,69.32,28.75
+2026-09-27,Google Ads,Search - Brand,New,8,432.38,55.00,19.50,100.76,12.82
+2026-09-27,Google Ads,Search - Brand,Returning,4,278.48,69.86,4.88,114.60,28.75
+2026-09-27,Google Ads,Search - Generic,New,4,236.37,55.00,19.50,55.08,12.82
+2026-09-27,Google Ads,Search - Generic,Returning,2,152.23,69.86,4.88,62.65,28.75
+2026-09-27,Google Ads,Shopping,New,7,388.33,55.00,19.50,90.50,12.82
+2026-09-27,Google Ads,Shopping,Returning,4,250.11,69.86,4.88,102.93,28.75
+2026-09-27,Meta Ads,Prospecting - Lookalike,New,11,601.55,55.00,19.50,140.18,12.82
+2026-09-27,Meta Ads,Prospecting - Lookalike,Returning,6,387.43,69.86,4.88,159.44,28.75
+2026-09-27,Meta Ads,Retargeting - Warm,New,7,386.92,55.00,19.50,90.17,12.82
+2026-09-27,Meta Ads,Retargeting - Warm,Returning,4,249.19,69.86,4.88,102.55,28.75
+2026-09-27,Meta Ads,Video Views,New,3,199.67,55.00,19.50,46.53,12.82
+2026-09-27,Meta Ads,Video Views,Returning,2,128.60,69.86,4.88,52.92,28.75
+2026-09-27,TikTok Ads,Creator Collab,New,3,160.79,55.00,19.50,37.47,12.82
+2026-09-27,TikTok Ads,Creator Collab,Returning,1,103.56,69.86,4.88,42.62,28.75
+2026-09-27,TikTok Ads,Spark Ads,New,5,251.70,55.00,19.50,58.66,12.82
+2026-09-27,TikTok Ads,Spark Ads,Returning,2,162.11,69.86,4.88,66.71,28.75
+2026-09-28,Google Ads,Search - Brand,New,9,484.06,55.00,19.50,112.80,12.82
+2026-09-28,Google Ads,Search - Brand,Returning,4,311.76,69.86,4.88,128.30,28.75
+2026-09-28,Google Ads,Search - Generic,New,3,200.61,55.00,19.50,46.75,12.82
+2026-09-28,Google Ads,Search - Generic,Returning,2,129.20,69.86,4.88,53.17,28.75
+2026-09-28,Google Ads,Shopping,New,9,460.39,55.00,19.50,107.29,12.82
+2026-09-28,Google Ads,Shopping,Returning,4,296.51,69.86,4.88,122.02,28.75
+2026-09-28,Meta Ads,Prospecting - Lookalike,New,9,522.89,55.00,19.50,121.85,12.82
+2026-09-28,Meta Ads,Prospecting - Lookalike,Returning,5,336.76,69.86,4.88,138.59,28.75
+2026-09-28,Meta Ads,Retargeting - Warm,New,9,511.74,55.00,19.50,119.25,12.82
+2026-09-28,Meta Ads,Retargeting - Warm,Returning,5,329.58,69.86,4.88,135.63,28.75
+2026-09-28,Meta Ads,Video Views,New,3,187.74,55.00,19.50,43.75,12.82
+2026-09-28,Meta Ads,Video Views,Returning,2,120.92,69.86,4.88,49.76,28.75
+2026-09-28,TikTok Ads,Creator Collab,New,2,126.30,55.00,19.50,29.43,12.82
+2026-09-28,TikTok Ads,Creator Collab,Returning,1,81.35,69.86,4.88,33.48,28.75
+2026-09-28,TikTok Ads,Spark Ads,New,5,306.66,55.00,19.50,71.46,12.82
+2026-09-28,TikTok Ads,Spark Ads,Returning,3,197.51,69.86,4.88,81.28,28.75
+2026-09-29,Google Ads,Search - Brand,New,7,367.95,55.00,19.50,85.74,12.82
+2026-09-29,Google Ads,Search - Brand,Returning,3,236.97,69.86,4.88,97.52,28.75
+2026-09-29,Google Ads,Search - Generic,New,4,214.03,55.00,19.50,49.88,12.82
+2026-09-29,Google Ads,Search - Generic,Returning,2,137.84,69.86,4.88,56.73,28.75
+2026-09-29,Google Ads,Shopping,New,7,385.62,55.00,19.50,89.86,12.82
+2026-09-29,Google Ads,Shopping,Returning,4,248.35,69.86,4.88,102.21,28.75
+2026-09-29,Meta Ads,Prospecting - Lookalike,New,12,700.49,55.00,19.50,163.24,12.82
+2026-09-29,Meta Ads,Prospecting - Lookalike,Returning,7,451.15,69.86,4.88,185.66,28.75
+2026-09-29,Meta Ads,Retargeting - Warm,New,9,485.87,55.00,19.50,113.22,12.82
+2026-09-29,Meta Ads,Retargeting - Warm,Returning,4,312.92,69.86,4.88,128.78,28.75
+2026-09-29,Meta Ads,Video Views,New,4,206.08,55.00,19.50,48.02,12.82
+2026-09-29,Meta Ads,Video Views,Returning,2,132.73,69.86,4.88,54.62,28.75
+2026-09-29,TikTok Ads,Creator Collab,New,2,122.95,55.00,19.50,28.65,12.82
+2026-09-29,TikTok Ads,Creator Collab,Returning,1,79.18,69.86,4.88,32.59,28.75
+2026-09-29,TikTok Ads,Spark Ads,New,3,150.03,55.00,19.50,34.96,12.82
+2026-09-29,TikTok Ads,Spark Ads,Returning,1,96.63,69.86,4.88,39.77,28.75
+2026-09-30,Google Ads,Search - Brand,New,5,255.37,55.00,19.50,59.51,12.82
+2026-09-30,Google Ads,Search - Brand,Returning,2,164.47,69.86,4.88,67.68,28.75
+2026-09-30,Google Ads,Search - Generic,New,3,147.06,55.00,19.50,34.27,12.82
+2026-09-30,Google Ads,Search - Generic,Returning,1,94.72,69.86,4.88,38.98,28.75
+2026-09-30,Google Ads,Shopping,New,4,226.06,55.00,19.50,52.68,12.82
+2026-09-30,Google Ads,Shopping,Returning,2,145.59,69.86,4.88,59.92,28.75
+2026-09-30,Meta Ads,Prospecting - Lookalike,New,9,458.78,55.00,19.50,106.91,12.82
+2026-09-30,Meta Ads,Prospecting - Lookalike,Returning,4,295.47,69.86,4.88,121.60,28.75
+2026-09-30,Meta Ads,Retargeting - Warm,New,13,742.11,55.00,19.50,172.94,12.82
+2026-09-30,Meta Ads,Retargeting - Warm,Returning,7,477.95,69.86,4.88,196.69,28.75
+2026-09-30,Meta Ads,Video Views,New,4,228.81,55.00,19.50,53.32,12.82
+2026-09-30,Meta Ads,Video Views,Returning,2,147.37,69.86,4.88,60.65,28.75
+2026-09-30,TikTok Ads,Creator Collab,New,3,178.96,55.00,19.50,41.70,12.82
+2026-09-30,TikTok Ads,Creator Collab,Returning,2,115.25,69.86,4.88,47.43,28.75
+2026-09-30,TikTok Ads,Spark Ads,New,4,203.83,55.00,19.50,47.50,12.82
+2026-09-30,TikTok Ads,Spark Ads,Returning,2,131.27,69.86,4.88,54.02,28.75
+2026-10-01,Google Ads,Search - Brand,New,7,355.22,55.00,19.50,82.78,12.82
+2026-10-01,Google Ads,Search - Brand,Returning,3,228.77,69.86,4.88,94.15,28.75
+2026-10-01,Google Ads,Search - Generic,New,3,164.58,55.00,19.50,38.35,12.82
+2026-10-01,Google Ads,Search - Generic,Returning,2,105.99,69.86,4.88,43.62,28.75
+2026-10-01,Google Ads,Shopping,New,6,323.51,55.00,19.50,75.39,12.82
+2026-10-01,Google Ads,Shopping,Returning,3,208.36,69.86,4.88,85.75,28.75
+2026-10-01,Meta Ads,Prospecting - Lookalike,New,10,529.32,55.00,19.50,123.35,12.82
+2026-10-01,Meta Ads,Prospecting - Lookalike,Returning,5,340.90,69.86,4.88,140.29,28.75
+2026-10-01,Meta Ads,Retargeting - Warm,New,13,712.27,55.00,19.50,165.98,12.82
+2026-10-01,Meta Ads,Retargeting - Warm,Returning,7,458.73,69.86,4.88,188.78,28.75
+2026-10-01,Meta Ads,Video Views,New,4,219.21,55.00,19.50,51.08,12.82
+2026-10-01,Meta Ads,Video Views,Returning,2,141.18,69.86,4.88,58.10,28.75
+2026-10-01,TikTok Ads,Creator Collab,New,3,182.95,55.00,19.50,42.63,12.82
+2026-10-01,TikTok Ads,Creator Collab,Returning,2,117.82,69.86,4.88,48.49,28.75
+2026-10-01,TikTok Ads,Spark Ads,New,3,192.63,55.00,19.50,44.89,12.82
+2026-10-01,TikTok Ads,Spark Ads,Returning,2,124.06,69.86,4.88,51.05,28.75
+2026-10-02,Google Ads,Search - Brand,New,10,548.11,55.00,19.50,127.73,12.82
+2026-10-02,Google Ads,Search - Brand,Returning,5,353.01,69.86,4.88,145.27,28.75
+2026-10-02,Google Ads,Search - Generic,New,3,183.72,55.00,19.50,42.81,12.82
+2026-10-02,Google Ads,Search - Generic,Returning,2,118.33,69.86,4.88,48.69,28.75
+2026-10-02,Google Ads,Shopping,New,4,231.75,55.00,19.50,54.01,12.82
+2026-10-02,Google Ads,Shopping,Returning,2,149.26,69.86,4.88,61.42,28.75
+2026-10-02,Meta Ads,Prospecting - Lookalike,New,12,642.07,55.00,19.50,149.62,12.82
+2026-10-02,Meta Ads,Prospecting - Lookalike,Returning,6,413.52,69.86,4.88,170.18,28.75
+2026-10-02,Meta Ads,Retargeting - Warm,New,14,819.84,55.00,19.50,191.05,12.82
+2026-10-02,Meta Ads,Retargeting - Warm,Returning,8,528.02,69.86,4.88,217.29,28.75
+2026-10-02,Meta Ads,Video Views,New,3,140.64,55.00,19.50,32.77,12.82
+2026-10-02,Meta Ads,Video Views,Returning,1,90.58,69.86,4.88,37.28,28.75
+2026-10-02,TikTok Ads,Creator Collab,New,3,136.86,55.00,19.50,31.89,12.82
+2026-10-02,TikTok Ads,Creator Collab,Returning,1,88.15,69.86,4.88,36.27,28.75
+2026-10-02,TikTok Ads,Spark Ads,New,5,285.00,55.00,19.50,66.42,12.82
+2026-10-02,TikTok Ads,Spark Ads,Returning,3,183.56,69.86,4.88,75.54,28.75
+2026-10-03,Google Ads,Search - Brand,New,7,401.52,55.00,19.50,93.57,12.82
+2026-10-03,Google Ads,Search - Brand,Returning,4,258.59,69.86,4.88,106.42,28.75
+2026-10-03,Google Ads,Search - Generic,New,4,225.97,55.00,19.50,52.66,12.82
+2026-10-03,Google Ads,Search - Generic,Returning,2,145.54,69.86,4.88,59.89,28.75
+2026-10-03,Google Ads,Shopping,New,9,505.71,55.00,19.50,117.85,12.82
+2026-10-03,Google Ads,Shopping,Returning,5,325.70,69.86,4.88,134.04,28.75
+2026-10-03,Meta Ads,Prospecting - Lookalike,New,10,556.34,55.00,19.50,129.65,12.82
+2026-10-03,Meta Ads,Prospecting - Lookalike,Returning,5,358.31,69.86,4.88,147.46,28.75
+2026-10-03,Meta Ads,Retargeting - Warm,New,7,417.84,55.00,19.50,97.37,12.82
+2026-10-03,Meta Ads,Retargeting - Warm,Returning,4,269.10,69.86,4.88,110.74,28.75
+2026-10-03,Meta Ads,Video Views,New,2,112.35,55.00,19.50,26.18,12.82
+2026-10-03,Meta Ads,Video Views,Returning,1,72.35,69.86,4.88,29.78,28.75
+2026-10-03,TikTok Ads,Creator Collab,New,3,153.91,55.00,19.50,35.87,12.82
+2026-10-03,TikTok Ads,Creator Collab,Returning,1,99.13,69.86,4.88,40.79,28.75
+2026-10-03,TikTok Ads,Spark Ads,New,3,176.60,55.00,19.50,41.15,12.82
+2026-10-03,TikTok Ads,Spark Ads,Returning,2,113.74,69.86,4.88,46.81,28.75
+2026-10-04,Google Ads,Search - Brand,New,10,540.25,55.00,19.50,125.90,12.82
+2026-10-04,Google Ads,Search - Brand,Returning,5,347.95,69.86,4.88,143.19,28.75
+2026-10-04,Google Ads,Search - Generic,New,3,165.49,55.00,19.50,38.56,12.82
+2026-10-04,Google Ads,Search - Generic,Returning,2,106.58,69.86,4.88,43.86,28.75
+2026-10-04,Google Ads,Shopping,New,9,490.54,55.00,19.50,114.31,12.82
+2026-10-04,Google Ads,Shopping,Returning,4,315.93,69.86,4.88,130.01,28.75
+2026-10-04,Meta Ads,Prospecting - Lookalike,New,12,655.20,55.00,19.50,152.68,12.82
+2026-10-04,Meta Ads,Prospecting - Lookalike,Returning,6,421.98,69.86,4.88,173.66,28.75
+2026-10-04,Meta Ads,Retargeting - Warm,New,11,585.07,55.00,19.50,136.34,12.82
+2026-10-04,Meta Ads,Retargeting - Warm,Returning,6,376.81,69.86,4.88,155.07,28.75
+2026-10-04,Meta Ads,Video Views,New,3,153.05,55.00,19.50,35.67,12.82
+2026-10-04,Meta Ads,Video Views,Returning,1,98.57,69.86,4.88,40.56,28.75
+2026-10-04,TikTok Ads,Creator Collab,New,2,94.84,55.00,19.50,22.10,12.82
+2026-10-04,TikTok Ads,Creator Collab,Returning,1,61.08,69.86,4.88,25.14,28.75
+2026-10-04,TikTok Ads,Spark Ads,New,3,166.26,55.00,19.50,38.74,12.82
+2026-10-04,TikTok Ads,Spark Ads,Returning,2,107.08,69.86,4.88,44.07,28.75
+2026-10-05,Google Ads,Search - Brand,New,9,505.62,55.00,19.50,117.83,12.82
+2026-10-05,Google Ads,Search - Brand,Returning,5,325.65,69.86,4.88,134.01,28.75
+2026-10-05,Google Ads,Search - Generic,New,3,163.82,55.00,19.50,38.18,12.82
+2026-10-05,Google Ads,Search - Generic,Returning,1,105.51,69.86,4.88,43.42,28.75
+2026-10-05,Google Ads,Shopping,New,9,476.37,55.00,19.50,111.01,12.82
+2026-10-05,Google Ads,Shopping,Returning,4,306.80,69.86,4.88,126.26,28.75
+2026-10-05,Meta Ads,Prospecting - Lookalike,New,10,539.60,55.00,19.50,125.75,12.82
+2026-10-05,Meta Ads,Prospecting - Lookalike,Returning,5,347.53,69.86,4.88,143.02,28.75
+2026-10-05,Meta Ads,Retargeting - Warm,New,7,389.31,55.00,19.50,90.72,12.82
+2026-10-05,Meta Ads,Retargeting - Warm,Returning,4,250.73,69.86,4.88,103.18,28.75
+2026-10-05,Meta Ads,Video Views,New,3,146.19,55.00,19.50,34.07,12.82
+2026-10-05,Meta Ads,Video Views,Returning,1,94.16,69.86,4.88,38.75,28.75
+2026-10-05,TikTok Ads,Creator Collab,New,2,109.71,55.00,19.50,25.57,12.82
+2026-10-05,TikTok Ads,Creator Collab,Returning,1,70.66,69.86,4.88,29.08,28.75
+2026-10-05,TikTok Ads,Spark Ads,New,4,211.96,55.00,19.50,49.39,12.82
+2026-10-05,TikTok Ads,Spark Ads,Returning,2,136.51,69.86,4.88,56.18,28.75
+2026-10-06,Google Ads,Search - Brand,New,5,239.03,55.00,19.50,55.70,12.82
+2026-10-06,Google Ads,Search - Brand,Returning,2,153.95,69.86,4.88,63.35,28.75
+2026-10-06,Google Ads,Search - Generic,New,3,138.62,55.00,19.50,32.30,12.82
+2026-10-06,Google Ads,Search - Generic,Returning,1,89.28,69.86,4.88,36.74,28.75
+2026-10-06,Google Ads,Shopping,New,6,318.50,55.00,19.50,74.22,12.82
+2026-10-06,Google Ads,Shopping,Returning,3,205.13,69.86,4.88,84.42,28.75
+2026-10-06,Meta Ads,Prospecting - Lookalike,New,11,591.32,55.00,19.50,137.80,12.82
+2026-10-06,Meta Ads,Prospecting - Lookalike,Returning,5,380.84,69.86,4.88,156.73,28.75
+2026-10-06,Meta Ads,Retargeting - Warm,New,9,483.58,55.00,19.50,112.69,12.82
+2026-10-06,Meta Ads,Retargeting - Warm,Returning,4,311.45,69.86,4.88,128.17,28.75
+2026-10-06,Meta Ads,Video Views,New,3,138.04,55.00,19.50,32.17,12.82
+2026-10-06,Meta Ads,Video Views,Returning,1,88.91,69.86,4.88,36.59,28.75
+2026-10-06,TikTok Ads,Creator Collab,New,3,180.15,55.00,19.50,41.98,12.82
+2026-10-06,TikTok Ads,Creator Collab,Returning,2,116.02,69.86,4.88,47.75,28.75
+2026-10-06,TikTok Ads,Spark Ads,New,4,207.23,55.00,19.50,48.29,12.82
+2026-10-06,TikTok Ads,Spark Ads,Returning,2,133.47,69.86,4.88,54.93,28.75
+2026-10-07,Google Ads,Search - Brand,New,9,461.66,55.00,19.50,107.58,12.82
+2026-10-07,Google Ads,Search - Brand,Returning,4,297.33,69.86,4.88,122.36,28.75
+2026-10-07,Google Ads,Search - Generic,New,4,233.19,55.00,19.50,54.34,12.82
+2026-10-07,Google Ads,Search - Generic,Returning,2,150.19,69.86,4.88,61.81,28.75
+2026-10-07,Google Ads,Shopping,New,5,243.33,55.00,19.50,56.71,12.82
+2026-10-07,Google Ads,Shopping,Returning,2,156.72,69.86,4.88,64.49,28.75
+2026-10-07,Meta Ads,Prospecting - Lookalike,New,6,323.53,55.00,19.50,75.39,12.82
+2026-10-07,Meta Ads,Prospecting - Lookalike,Returning,3,208.36,69.86,4.88,85.75,28.75
+2026-10-07,Meta Ads,Retargeting - Warm,New,11,626.72,55.00,19.50,146.05,12.82
+2026-10-07,Meta Ads,Retargeting - Warm,Returning,6,403.64,69.86,4.88,166.11,28.75
+2026-10-07,Meta Ads,Video Views,New,5,243.19,55.00,19.50,56.67,12.82
+2026-10-07,Meta Ads,Video Views,Returning,2,156.62,69.86,4.88,64.46,28.75
+2026-10-07,TikTok Ads,Creator Collab,New,3,139.32,55.00,19.50,32.47,12.82
+2026-10-07,TikTok Ads,Creator Collab,Returning,1,89.73,69.86,4.88,36.93,28.75
+2026-10-07,TikTok Ads,Spark Ads,New,3,181.89,55.00,19.50,42.39,12.82
+2026-10-07,TikTok Ads,Spark Ads,Returning,2,117.14,69.86,4.88,48.21,28.75
+2026-10-08,Google Ads,Search - Brand,New,8,449.42,55.00,19.50,104.73,12.82
+2026-10-08,Google Ads,Search - Brand,Returning,4,289.44,69.86,4.88,119.12,28.75
+2026-10-08,Google Ads,Search - Generic,New,3,165.29,55.00,19.50,38.52,12.82
+2026-10-08,Google Ads,Search - Generic,Returning,2,106.46,69.86,4.88,43.81,28.75
+2026-10-08,Google Ads,Shopping,New,9,490.32,55.00,19.50,114.26,12.82
+2026-10-08,Google Ads,Shopping,Returning,4,315.79,69.86,4.88,129.96,28.75
+2026-10-08,Meta Ads,Prospecting - Lookalike,New,7,397.54,55.00,19.50,92.64,12.82
+2026-10-08,Meta Ads,Prospecting - Lookalike,Returning,4,256.04,69.86,4.88,105.37,28.75
+2026-10-08,Meta Ads,Retargeting - Warm,New,7,387.68,55.00,19.50,90.34,12.82
+2026-10-08,Meta Ads,Retargeting - Warm,Returning,4,249.68,69.86,4.88,102.75,28.75
+2026-10-08,Meta Ads,Video Views,New,4,233.63,55.00,19.50,54.44,12.82
+2026-10-08,Meta Ads,Video Views,Returning,2,150.46,69.86,4.88,61.92,28.75
+2026-10-08,TikTok Ads,Creator Collab,New,3,135.44,55.00,19.50,31.56,12.82
+2026-10-08,TikTok Ads,Creator Collab,Returning,1,87.23,69.86,4.88,35.90,28.75
+2026-10-08,TikTok Ads,Spark Ads,New,3,176.80,55.00,19.50,41.20,12.82
+2026-10-08,TikTok Ads,Spark Ads,Returning,2,113.87,69.86,4.88,46.86,28.75
+2026-10-09,Google Ads,Search - Brand,New,7,403.99,55.00,19.50,94.14,12.82
+2026-10-09,Google Ads,Search - Brand,Returning,4,260.18,69.86,4.88,107.07,28.75
+2026-10-09,Google Ads,Search - Generic,New,5,279.51,55.00,19.50,65.14,12.82
+2026-10-09,Google Ads,Search - Generic,Returning,3,180.02,69.86,4.88,74.08,28.75
+2026-10-09,Google Ads,Shopping,New,9,511.09,55.00,19.50,119.10,12.82
+2026-10-09,Google Ads,Shopping,Returning,5,329.16,69.86,4.88,135.46,28.75
+2026-10-09,Meta Ads,Prospecting - Lookalike,New,8,422.54,55.00,19.50,98.47,12.82
+2026-10-09,Meta Ads,Prospecting - Lookalike,Returning,4,272.13,69.86,4.88,111.99,28.75
+2026-10-09,Meta Ads,Retargeting - Warm,New,9,473.70,55.00,19.50,110.39,12.82
+2026-10-09,Meta Ads,Retargeting - Warm,Returning,4,305.08,69.86,4.88,125.55,28.75
+2026-10-09,Meta Ads,Video Views,New,3,152.94,55.00,19.50,35.64,12.82
+2026-10-09,Meta Ads,Video Views,Returning,1,98.50,69.86,4.88,40.54,28.75
+2026-10-09,TikTok Ads,Creator Collab,New,3,157.01,55.00,19.50,36.59,12.82
+2026-10-09,TikTok Ads,Creator Collab,Returning,1,101.12,69.86,4.88,41.61,28.75
+2026-10-09,TikTok Ads,Spark Ads,New,5,295.89,55.00,19.50,68.95,12.82
+2026-10-09,TikTok Ads,Spark Ads,Returning,3,190.57,69.86,4.88,78.42,28.75
+2026-10-10,Google Ads,Search - Brand,New,6,319.18,55.00,19.50,74.38,12.82
+2026-10-10,Google Ads,Search - Brand,Returning,3,205.57,69.86,4.88,84.60,28.75
+2026-10-10,Google Ads,Search - Generic,New,5,271.78,55.00,19.50,63.33,12.82
+2026-10-10,Google Ads,Search - Generic,Returning,2,175.04,69.86,4.88,72.03,28.75
+2026-10-10,Google Ads,Shopping,New,5,251.68,55.00,19.50,58.65,12.82
+2026-10-10,Google Ads,Shopping,Returning,2,162.10,69.86,4.88,66.71,28.75
+2026-10-10,Meta Ads,Prospecting - Lookalike,New,6,337.33,55.00,19.50,78.61,12.82
+2026-10-10,Meta Ads,Prospecting - Lookalike,Returning,3,217.26,69.86,4.88,89.41,28.75
+2026-10-10,Meta Ads,Retargeting - Warm,New,12,698.88,55.00,19.50,162.86,12.82
+2026-10-10,Meta Ads,Retargeting - Warm,Returning,7,450.11,69.86,4.88,185.23,28.75
+2026-10-10,Meta Ads,Video Views,New,4,201.89,55.00,19.50,47.05,12.82
+2026-10-10,Meta Ads,Video Views,Returning,2,130.03,69.86,4.88,53.51,28.75
+2026-10-10,TikTok Ads,Creator Collab,New,1,84.60,55.00,19.50,19.72,12.82
+2026-10-10,TikTok Ads,Creator Collab,Returning,1,54.49,69.86,4.88,22.42,28.75
+2026-10-10,TikTok Ads,Spark Ads,New,4,210.99,55.00,19.50,49.17,12.82
+2026-10-10,TikTok Ads,Spark Ads,Returning,2,135.89,69.86,4.88,55.92,28.75
+2026-10-11,Google Ads,Search - Brand,New,8,436.62,55.00,19.50,101.75,12.82
+2026-10-11,Google Ads,Search - Brand,Returning,4,281.21,69.86,4.88,115.72,28.75
+2026-10-11,Google Ads,Search - Generic,New,3,138.60,55.00,19.50,32.30,12.82
+2026-10-11,Google Ads,Search - Generic,Returning,1,89.26,69.86,4.88,36.73,28.75
+2026-10-11,Google Ads,Shopping,New,7,372.25,55.00,19.50,86.75,12.82
+2026-10-11,Google Ads,Shopping,Returning,3,239.75,69.86,4.88,98.66,28.75
+2026-10-11,Meta Ads,Prospecting - Lookalike,New,7,399.53,55.00,19.50,93.11,12.82
+2026-10-11,Meta Ads,Prospecting - Lookalike,Returning,4,257.32,69.86,4.88,105.89,28.75
+2026-10-11,Meta Ads,Retargeting - Warm,New,12,646.48,55.00,19.50,150.65,12.82
+2026-10-11,Meta Ads,Retargeting - Warm,Returning,6,416.37,69.86,4.88,171.35,28.75
+2026-10-11,Meta Ads,Video Views,New,3,164.57,55.00,19.50,38.35,12.82
+2026-10-11,Meta Ads,Video Views,Returning,2,105.99,69.86,4.88,43.62,28.75
+2026-10-11,TikTok Ads,Creator Collab,New,3,139.84,55.00,19.50,32.59,12.82
+2026-10-11,TikTok Ads,Creator Collab,Returning,1,90.07,69.86,4.88,37.06,28.75
+2026-10-11,TikTok Ads,Spark Ads,New,5,284.94,55.00,19.50,66.40,12.82
+2026-10-11,TikTok Ads,Spark Ads,Returning,3,183.52,69.86,4.88,75.52,28.75
+2026-10-12,Google Ads,Search - Brand,New,5,270.44,55.00,19.50,63.02,12.82
+2026-10-12,Google Ads,Search - Brand,Returning,2,174.18,69.86,4.88,71.68,28.75
+2026-10-12,Google Ads,Search - Generic,New,3,166.82,55.00,19.50,38.88,12.82
+2026-10-12,Google Ads,Search - Generic,Returning,2,107.44,69.86,4.88,44.21,28.75
+2026-10-12,Google Ads,Shopping,New,5,246.73,55.00,19.50,57.50,12.82
+2026-10-12,Google Ads,Shopping,Returning,2,158.91,69.86,4.88,65.40,28.75
+2026-10-12,Meta Ads,Prospecting - Lookalike,New,6,345.96,55.00,19.50,80.62,12.82
+2026-10-12,Meta Ads,Prospecting - Lookalike,Returning,3,222.81,69.86,4.88,91.69,28.75
+2026-10-12,Meta Ads,Retargeting - Warm,New,9,484.48,55.00,19.50,112.90,12.82
+2026-10-12,Meta Ads,Retargeting - Warm,Returning,4,312.03,69.86,4.88,128.41,28.75
+2026-10-12,Meta Ads,Video Views,New,5,239.11,55.00,19.50,55.72,12.82
+2026-10-12,Meta Ads,Video Views,Returning,2,154.00,69.86,4.88,63.38,28.75
+2026-10-12,TikTok Ads,Creator Collab,New,3,131.32,55.00,19.50,30.60,12.82
+2026-10-12,TikTok Ads,Creator Collab,Returning,1,84.57,69.86,4.88,34.80,28.75
+2026-10-12,TikTok Ads,Spark Ads,New,4,229.95,55.00,19.50,53.59,12.82
+2026-10-12,TikTok Ads,Spark Ads,Returning,2,148.09,69.86,4.88,60.95,28.75
+2026-10-13,Google Ads,Search - Brand,New,7,371.90,55.00,19.50,86.67,12.82
+2026-10-13,Google Ads,Search - Brand,Returning,3,239.52,69.86,4.88,98.57,28.75
+2026-10-13,Google Ads,Search - Generic,New,5,239.59,55.00,19.50,55.83,12.82
+2026-10-13,Google Ads,Search - Generic,Returning,2,154.31,69.86,4.88,63.50,28.75
+2026-10-13,Google Ads,Shopping,New,8,454.96,55.00,19.50,106.02,12.82
+2026-10-13,Google Ads,Shopping,Returning,4,293.02,69.86,4.88,120.59,28.75
+2026-10-13,Meta Ads,Prospecting - Lookalike,New,7,417.90,55.00,19.50,97.38,12.82
+2026-10-13,Meta Ads,Prospecting - Lookalike,Returning,4,269.14,69.86,4.88,110.76,28.75
+2026-10-13,Meta Ads,Retargeting - Warm,New,12,668.61,55.00,19.50,155.81,12.82
+2026-10-13,Meta Ads,Retargeting - Warm,Returning,6,430.62,69.86,4.88,177.21,28.75
+2026-10-13,Meta Ads,Video Views,New,3,173.65,55.00,19.50,40.47,12.82
+2026-10-13,Meta Ads,Video Views,Returning,2,111.84,69.86,4.88,46.03,28.75
+2026-10-13,TikTok Ads,Creator Collab,New,3,167.99,55.00,19.50,39.15,12.82
+2026-10-13,TikTok Ads,Creator Collab,Returning,2,108.19,69.86,4.88,44.52,28.75
+2026-10-13,TikTok Ads,Spark Ads,New,3,141.57,55.00,19.50,32.99,12.82
+2026-10-13,TikTok Ads,Spark Ads,Returning,1,91.18,69.86,4.88,37.52,28.75
+2026-10-14,Google Ads,Search - Brand,New,7,377.85,55.00,19.50,88.05,12.82
+2026-10-14,Google Ads,Search - Brand,Returning,3,243.35,69.86,4.88,100.15,28.75
+2026-10-14,Google Ads,Search - Generic,New,3,162.81,55.00,19.50,37.94,12.82
+2026-10-14,Google Ads,Search - Generic,Returning,1,104.86,69.86,4.88,43.15,28.75
+2026-10-14,Google Ads,Shopping,New,9,456.54,55.00,19.50,106.39,12.82
+2026-10-14,Google Ads,Shopping,Returning,4,294.03,69.86,4.88,121.00,28.75
+2026-10-14,Meta Ads,Prospecting - Lookalike,New,10,563.32,55.00,19.50,131.27,12.82
+2026-10-14,Meta Ads,Prospecting - Lookalike,Returning,5,362.80,69.86,4.88,149.30,28.75
+2026-10-14,Meta Ads,Retargeting - Warm,New,14,778.53,55.00,19.50,181.43,12.82
+2026-10-14,Meta Ads,Retargeting - Warm,Returning,7,501.41,69.86,4.88,206.35,28.75
+2026-10-14,Meta Ads,Video Views,New,3,145.79,55.00,19.50,33.97,12.82
+2026-10-14,Meta Ads,Video Views,Returning,1,93.89,69.86,4.88,38.64,28.75
+2026-10-14,TikTok Ads,Creator Collab,New,2,95.11,55.00,19.50,22.17,12.82
+2026-10-14,TikTok Ads,Creator Collab,Returning,1,61.26,69.86,4.88,25.21,28.75
+2026-10-14,TikTok Ads,Spark Ads,New,5,309.33,55.00,19.50,72.09,12.82
+2026-10-14,TikTok Ads,Spark Ads,Returning,3,199.23,69.86,4.88,81.99,28.75
+2026-10-15,Google Ads,Search - Brand,New,10,534.83,55.00,19.50,124.64,12.82
+2026-10-15,Google Ads,Search - Brand,Returning,5,344.46,69.86,4.88,141.75,28.75
+2026-10-15,Google Ads,Search - Generic,New,3,148.97,55.00,19.50,34.72,12.82
+2026-10-15,Google Ads,Search - Generic,Returning,1,95.95,69.86,4.88,39.48,28.75
+2026-10-15,Google Ads,Shopping,New,5,264.55,55.00,19.50,61.65,12.82
+2026-10-15,Google Ads,Shopping,Returning,2,170.39,69.86,4.88,70.12,28.75
+2026-10-15,Meta Ads,Prospecting - Lookalike,New,8,453.21,55.00,19.50,105.61,12.82
+2026-10-15,Meta Ads,Prospecting - Lookalike,Returning,4,291.89,69.86,4.88,120.12,28.75
+2026-10-15,Meta Ads,Retargeting - Warm,New,7,377.67,55.00,19.50,88.01,12.82
+2026-10-15,Meta Ads,Retargeting - Warm,Returning,3,243.24,69.86,4.88,100.10,28.75
+2026-10-15,Meta Ads,Video Views,New,3,143.17,55.00,19.50,33.36,12.82
+2026-10-15,Meta Ads,Video Views,Returning,1,92.20,69.86,4.88,37.94,28.75
+2026-10-15,TikTok Ads,Creator Collab,New,3,179.31,55.00,19.50,41.79,12.82
+2026-10-15,TikTok Ads,Creator Collab,Returning,2,115.49,69.86,4.88,47.53,28.75
+2026-10-15,TikTok Ads,Spark Ads,New,5,280.47,55.00,19.50,65.36,12.82
+2026-10-15,TikTok Ads,Spark Ads,Returning,3,180.63,69.86,4.88,74.34,28.75
+2026-10-16,Google Ads,Search - Brand,New,9,510.36,55.00,19.50,118.93,12.82
+2026-10-16,Google Ads,Search - Brand,Returning,5,328.69,69.86,4.88,135.27,28.75
+2026-10-16,Google Ads,Search - Generic,New,5,284.60,55.00,19.50,66.32,12.82
+2026-10-16,Google Ads,Search - Generic,Returning,3,183.29,69.86,4.88,75.43,28.75
+2026-10-16,Google Ads,Shopping,New,7,369.03,55.00,19.50,86.00,12.82
+2026-10-16,Google Ads,Shopping,Returning,3,237.67,69.86,4.88,97.81,28.75
+2026-10-16,Meta Ads,Prospecting - Lookalike,New,8,455.38,55.00,19.50,106.12,12.82
+2026-10-16,Meta Ads,Prospecting - Lookalike,Returning,4,293.29,69.86,4.88,120.70,28.75
+2026-10-16,Meta Ads,Retargeting - Warm,New,14,776.73,55.00,19.50,181.01,12.82
+2026-10-16,Meta Ads,Retargeting - Warm,Returning,7,500.25,69.86,4.88,205.87,28.75
+2026-10-16,Meta Ads,Video Views,New,3,188.38,55.00,19.50,43.90,12.82
+2026-10-16,Meta Ads,Video Views,Returning,2,121.32,69.86,4.88,49.93,28.75
+2026-10-16,TikTok Ads,Creator Collab,New,1,87.01,55.00,19.50,20.28,12.82
+2026-10-16,TikTok Ads,Creator Collab,Returning,1,56.04,69.86,4.88,23.06,28.75
+2026-10-16,TikTok Ads,Spark Ads,New,5,303.98,55.00,19.50,70.84,12.82
+2026-10-16,TikTok Ads,Spark Ads,Returning,3,195.78,69.86,4.88,80.57,28.75
+2026-10-17,Google Ads,Search - Brand,New,6,318.11,55.00,19.50,74.13,12.82
+2026-10-17,Google Ads,Search - Brand,Returning,3,204.87,69.86,4.88,84.31,28.75
+2026-10-17,Google Ads,Search - Generic,New,4,223.05,55.00,19.50,51.98,12.82
+2026-10-17,Google Ads,Search - Generic,Returning,2,143.66,69.86,4.88,59.12,28.75
+2026-10-17,Google Ads,Shopping,New,7,391.47,55.00,19.50,91.23,12.82
+2026-10-17,Google Ads,Shopping,Returning,4,252.13,69.86,4.88,103.76,28.75
+2026-10-17,Meta Ads,Prospecting - Lookalike,New,7,390.07,55.00,19.50,90.90,12.82
+2026-10-17,Meta Ads,Prospecting - Lookalike,Returning,4,251.22,69.86,4.88,103.39,28.75
+2026-10-17,Meta Ads,Retargeting - Warm,New,13,722.97,55.00,19.50,168.48,12.82
+2026-10-17,Meta Ads,Retargeting - Warm,Returning,7,465.62,69.86,4.88,191.62,28.75
+2026-10-17,Meta Ads,Video Views,New,3,145.48,55.00,19.50,33.90,12.82
+2026-10-17,Meta Ads,Video Views,Returning,1,93.69,69.86,4.88,38.56,28.75
+2026-10-17,TikTok Ads,Creator Collab,New,2,98.09,55.00,19.50,22.86,12.82
+2026-10-17,TikTok Ads,Creator Collab,Returning,1,63.17,69.86,4.88,26.00,28.75
+2026-10-17,TikTok Ads,Spark Ads,New,5,296.45,55.00,19.50,69.08,12.82
+2026-10-17,TikTok Ads,Spark Ads,Returning,3,190.92,69.86,4.88,78.57,28.75
+2026-10-18,Google Ads,Search - Brand,New,7,392.56,55.00,19.50,91.48,12.82
+2026-10-18,Google Ads,Search - Brand,Returning,4,252.83,69.86,4.88,104.05,28.75
+2026-10-18,Google Ads,Search - Generic,New,4,206.45,55.00,19.50,48.11,12.82
+2026-10-18,Google Ads,Search - Generic,Returning,2,132.96,69.86,4.88,54.72,28.75
+2026-10-18,Google Ads,Shopping,New,5,305.72,55.00,19.50,71.24,12.82
+2026-10-18,Google Ads,Shopping,Returning,3,196.89,69.86,4.88,81.03,28.75
+2026-10-18,Meta Ads,Prospecting - Lookalike,New,7,413.43,55.00,19.50,96.34,12.82
+2026-10-18,Meta Ads,Prospecting - Lookalike,Returning,4,266.27,69.86,4.88,109.58,28.75
+2026-10-18,Meta Ads,Retargeting - Warm,New,10,544.30,55.00,19.50,126.84,12.82
+2026-10-18,Meta Ads,Retargeting - Warm,Returning,5,350.55,69.86,4.88,144.26,28.75
+2026-10-18,Meta Ads,Video Views,New,3,191.71,55.00,19.50,44.68,12.82
+2026-10-18,Meta Ads,Video Views,Returning,2,123.47,69.86,4.88,50.81,28.75
+2026-10-18,TikTok Ads,Creator Collab,New,3,140.98,55.00,19.50,32.85,12.82
+2026-10-18,TikTok Ads,Creator Collab,Returning,1,90.80,69.86,4.88,37.37,28.75
+2026-10-18,TikTok Ads,Spark Ads,New,5,282.71,55.00,19.50,65.88,12.82
+2026-10-18,TikTok Ads,Spark Ads,Returning,3,182.08,69.86,4.88,74.93,28.75
+2026-10-19,Google Ads,Search - Brand,New,5,291.51,55.00,19.50,67.93,12.82
+2026-10-19,Google Ads,Search - Brand,Returning,3,187.74,69.86,4.88,77.26,28.75
+2026-10-19,Google Ads,Search - Generic,New,5,259.12,55.00,19.50,60.38,12.82
+2026-10-19,Google Ads,Search - Generic,Returning,2,166.88,69.86,4.88,68.68,28.75
+2026-10-19,Google Ads,Shopping,New,9,488.64,55.00,19.50,113.87,12.82
+2026-10-19,Google Ads,Shopping,Returning,4,314.71,69.86,4.88,129.51,28.75
+2026-10-19,Meta Ads,Prospecting - Lookalike,New,12,685.67,55.00,19.50,159.78,12.82
+2026-10-19,Meta Ads,Prospecting - Lookalike,Returning,7,441.60,69.86,4.88,181.73,28.75
+2026-10-19,Meta Ads,Retargeting - Warm,New,8,452.05,55.00,19.50,105.34,12.82
+2026-10-19,Meta Ads,Retargeting - Warm,Returning,4,291.14,69.86,4.88,119.81,28.75
+2026-10-19,Meta Ads,Video Views,New,4,236.71,55.00,19.50,55.16,12.82
+2026-10-19,Meta Ads,Video Views,Returning,2,152.45,69.86,4.88,62.74,28.75
+2026-10-19,TikTok Ads,Creator Collab,New,3,149.38,55.00,19.50,34.81,12.82
+2026-10-19,TikTok Ads,Creator Collab,Returning,1,96.21,69.86,4.88,39.59,28.75
+2026-10-19,TikTok Ads,Spark Ads,New,3,162.04,55.00,19.50,37.76,12.82
+2026-10-19,TikTok Ads,Spark Ads,Returning,1,104.36,69.86,4.88,42.95,28.75
+2026-10-20,Google Ads,Search - Brand,New,9,521.90,55.00,19.50,121.62,12.82
+2026-10-20,Google Ads,Search - Brand,Returning,5,336.13,69.86,4.88,138.33,28.75
+2026-10-20,Google Ads,Search - Generic,New,5,262.98,55.00,19.50,61.28,12.82
+2026-10-20,Google Ads,Search - Generic,Returning,2,169.37,69.86,4.88,69.70,28.75
+2026-10-20,Google Ads,Shopping,New,7,353.32,55.00,19.50,82.34,12.82
+2026-10-20,Google Ads,Shopping,Returning,3,227.56,69.86,4.88,93.65,28.75
+2026-10-20,Meta Ads,Prospecting - Lookalike,New,10,568.34,55.00,19.50,132.44,12.82
+2026-10-20,Meta Ads,Prospecting - Lookalike,Returning,5,366.04,69.86,4.88,150.64,28.75
+2026-10-20,Meta Ads,Retargeting - Warm,New,14,852.31,55.00,19.50,198.62,12.82
+2026-10-20,Meta Ads,Retargeting - Warm,Returning,8,548.93,69.86,4.88,225.90,28.75
+2026-10-20,Meta Ads,Video Views,New,3,165.11,55.00,19.50,38.48,12.82
+2026-10-20,Meta Ads,Video Views,Returning,2,106.34,69.86,4.88,43.76,28.75
+2026-10-20,TikTok Ads,Creator Collab,New,2,103.26,55.00,19.50,24.06,12.82
+2026-10-20,TikTok Ads,Creator Collab,Returning,1,66.51,69.86,4.88,27.37,28.75
+2026-10-20,TikTok Ads,Spark Ads,New,4,218.51,55.00,19.50,50.92,12.82
+2026-10-20,TikTok Ads,Spark Ads,Returning,2,140.73,69.86,4.88,57.91,28.75
+2026-10-21,Google Ads,Search - Brand,New,9,508.68,55.00,19.50,118.54,12.82
+2026-10-21,Google Ads,Search - Brand,Returning,5,327.62,69.86,4.88,134.82,28.75
+2026-10-21,Google Ads,Search - Generic,New,3,158.79,55.00,19.50,37.00,12.82
+2026-10-21,Google Ads,Search - Generic,Returning,1,102.26,69.86,4.88,42.08,28.75
+2026-10-21,Google Ads,Shopping,New,5,289.68,55.00,19.50,67.50,12.82
+2026-10-21,Google Ads,Shopping,Returning,3,186.56,69.86,4.88,76.78,28.75
+2026-10-21,Meta Ads,Prospecting - Lookalike,New,10,552.52,55.00,19.50,128.76,12.82
+2026-10-21,Meta Ads,Prospecting - Lookalike,Returning,5,355.85,69.86,4.88,146.44,28.75
+2026-10-21,Meta Ads,Retargeting - Warm,New,10,542.47,55.00,19.50,126.42,12.82
+2026-10-21,Meta Ads,Retargeting - Warm,Returning,5,349.38,69.86,4.88,143.78,28.75
+2026-10-21,Meta Ads,Video Views,New,3,139.24,55.00,19.50,32.45,12.82
+2026-10-21,Meta Ads,Video Views,Returning,1,89.68,69.86,4.88,36.91,28.75
+2026-10-21,TikTok Ads,Creator Collab,New,1,91.18,55.00,19.50,21.25,12.82
+2026-10-21,TikTok Ads,Creator Collab,Returning,1,58.72,69.86,4.88,24.17,28.75
+2026-10-21,TikTok Ads,Spark Ads,New,3,170.43,55.00,19.50,39.72,12.82
+2026-10-21,TikTok Ads,Spark Ads,Returning,2,109.76,69.86,4.88,45.17,28.75
+2026-10-22,Google Ads,Search - Brand,New,6,329.11,55.00,19.50,76.69,12.82
+2026-10-22,Google Ads,Search - Brand,Returning,3,211.96,69.86,4.88,87.23,28.75
+2026-10-22,Google Ads,Search - Generic,New,3,143.00,55.00,19.50,33.32,12.82
+2026-10-22,Google Ads,Search - Generic,Returning,1,92.10,69.86,4.88,37.90,28.75
+2026-10-22,Google Ads,Shopping,New,7,388.31,55.00,19.50,90.49,12.82
+2026-10-22,Google Ads,Shopping,Returning,4,250.09,69.86,4.88,102.92,28.75
+2026-10-22,Meta Ads,Prospecting - Lookalike,New,7,374.47,55.00,19.50,87.26,12.82
+2026-10-22,Meta Ads,Prospecting - Lookalike,Returning,3,241.17,69.86,4.88,99.25,28.75
+2026-10-22,Meta Ads,Retargeting - Warm,New,8,420.73,55.00,19.50,98.05,12.82
+2026-10-22,Meta Ads,Retargeting - Warm,Returning,4,270.97,69.86,4.88,111.51,28.75
+2026-10-22,Meta Ads,Video Views,New,5,251.03,55.00,19.50,58.50,12.82
+2026-10-22,Meta Ads,Video Views,Returning,2,161.68,69.86,4.88,66.53,28.75
+2026-10-22,TikTok Ads,Creator Collab,New,3,171.93,55.00,19.50,40.07,12.82
+2026-10-22,TikTok Ads,Creator Collab,Returning,2,110.73,69.86,4.88,45.57,28.75
+2026-10-22,TikTok Ads,Spark Ads,New,4,203.55,55.00,19.50,47.43,12.82
+2026-10-22,TikTok Ads,Spark Ads,Returning,2,131.09,69.86,4.88,53.95,28.75
+2026-10-23,Google Ads,Search - Brand,New,8,435.99,55.00,19.50,101.60,12.82
+2026-10-23,Google Ads,Search - Brand,Returning,4,280.80,69.86,4.88,115.56,28.75
+2026-10-23,Google Ads,Search - Generic,New,3,199.42,55.00,19.50,46.47,12.82
+2026-10-23,Google Ads,Search - Generic,Returning,2,128.43,69.86,4.88,52.85,28.75
+2026-10-23,Google Ads,Shopping,New,8,445.72,55.00,19.50,103.87,12.82
+2026-10-23,Google Ads,Shopping,Returning,4,287.07,69.86,4.88,118.14,28.75
+2026-10-23,Meta Ads,Prospecting - Lookalike,New,10,601.30,55.00,19.50,140.12,12.82
+2026-10-23,Meta Ads,Prospecting - Lookalike,Returning,5,387.27,69.86,4.88,159.37,28.75
+2026-10-23,Meta Ads,Retargeting - Warm,New,8,422.71,55.00,19.50,98.51,12.82
+2026-10-23,Meta Ads,Retargeting - Warm,Returning,4,272.25,69.86,4.88,112.04,28.75
+2026-10-23,Meta Ads,Video Views,New,3,180.93,55.00,19.50,42.16,12.82
+2026-10-23,Meta Ads,Video Views,Returning,2,116.53,69.86,4.88,47.95,28.75
+2026-10-23,TikTok Ads,Creator Collab,New,2,104.42,55.00,19.50,24.33,12.82
+2026-10-23,TikTok Ads,Creator Collab,Returning,1,67.25,69.86,4.88,27.68,28.75
+2026-10-23,TikTok Ads,Spark Ads,New,3,143.00,55.00,19.50,33.32,12.82
+2026-10-23,TikTok Ads,Spark Ads,Returning,1,92.09,69.86,4.88,37.90,28.75
+2026-10-24,Google Ads,Search - Brand,New,8,426.58,55.00,19.50,99.41,12.82
+2026-10-24,Google Ads,Search - Brand,Returning,4,274.74,69.86,4.88,113.06,28.75
+2026-10-24,Google Ads,Search - Generic,New,3,198.16,55.00,19.50,46.18,12.82
+2026-10-24,Google Ads,Search - Generic,Returning,2,127.62,69.86,4.88,52.52,28.75
+2026-10-24,Google Ads,Shopping,New,5,286.47,55.00,19.50,66.76,12.82
+2026-10-24,Google Ads,Shopping,Returning,3,184.50,69.86,4.88,75.93,28.75
+2026-10-24,Meta Ads,Prospecting - Lookalike,New,7,371.32,55.00,19.50,86.53,12.82
+2026-10-24,Meta Ads,Prospecting - Lookalike,Returning,3,239.15,69.86,4.88,98.42,28.75
+2026-10-24,Meta Ads,Retargeting - Warm,New,14,797.53,55.00,19.50,185.85,12.82
+2026-10-24,Meta Ads,Retargeting - Warm,Returning,8,513.65,69.86,4.88,211.38,28.75
+2026-10-24,Meta Ads,Video Views,New,2,120.79,55.00,19.50,28.15,12.82
+2026-10-24,Meta Ads,Video Views,Returning,1,77.80,69.86,4.88,32.02,28.75
+2026-10-24,TikTok Ads,Creator Collab,New,3,140.93,55.00,19.50,32.84,12.82
+2026-10-24,TikTok Ads,Creator Collab,Returning,1,90.76,69.86,4.88,37.35,28.75
+2026-10-24,TikTok Ads,Spark Ads,New,3,199.64,55.00,19.50,46.52,12.82
+2026-10-24,TikTok Ads,Spark Ads,Returning,2,128.58,69.86,4.88,52.91,28.75
+2026-10-25,Google Ads,Search - Brand,New,5,283.41,55.00,19.50,66.04,12.82
+2026-10-25,Google Ads,Search - Brand,Returning,2,182.53,69.86,4.88,75.12,28.75
+2026-10-25,Google Ads,Search - Generic,New,5,205.49,55.00,19.50,47.89,12.82
+2026-10-25,Google Ads,Search - Generic,Returning,2,132.35,69.86,4.88,54.46,28.75
+2026-10-25,Google Ads,Shopping,New,6,319.76,55.00,19.50,74.52,12.82
+2026-10-25,Google Ads,Shopping,Returning,3,205.94,69.86,4.88,84.75,28.75
+2026-10-25,Meta Ads,Prospecting - Lookalike,New,10,459.16,55.00,19.50,107.00,12.82
+2026-10-25,Meta Ads,Prospecting - Lookalike,Returning,5,295.72,69.86,4.88,121.70,28.75
+2026-10-25,Meta Ads,Retargeting - Warm,New,13,675.83,55.00,19.50,157.49,12.82
+2026-10-25,Meta Ads,Retargeting - Warm,Returning,7,435.27,69.86,4.88,179.13,28.75
+2026-10-25,Meta Ads,Video Views,New,1,114.49,55.00,19.50,26.68,12.82
+2026-10-25,Meta Ads,Video Views,Returning,1,73.74,69.86,4.88,30.35,28.75
+2026-10-25,TikTok Ads,Creator Collab,New,2,143.54,55.00,19.50,33.45,12.82
+2026-10-25,TikTok Ads,Creator Collab,Returning,1,92.44,69.86,4.88,38.04,28.75
+2026-10-25,TikTok Ads,Spark Ads,New,5,306.87,55.00,19.50,71.51,12.82
+2026-10-25,TikTok Ads,Spark Ads,Returning,3,197.63,69.86,4.88,81.33,28.75

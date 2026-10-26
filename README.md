@@ -15,8 +15,12 @@ A multipage Streamlit dashboard for exploring paid marketing performance against
 │   ├── feature_request.md
 │   ├── bug_fix.md
 │   └── code_review.md
-├── data/                          # Location for your working campaign CSV
-├── sample_campaign_data.csv       # Starter ecommerce dataset
+├── data/                          # Project data
+│   ├── campaign_data.csv          # Combined, normalized campaign dataset
+│   ├── products.csv               # Keyed product allocations
+│   └── customer_segments.csv      # Keyed customer-segment allocations
+├── scripts/build_campaign_data.py # Normalize combined campaign data
+├── scripts/add_business_summary_keys.py # Key aggregate business summaries
 ├── requirements.txt
 ├── AGENTS.md                      # Repository instructions for coding agents
 ├── SKILL.md                       # Project workflow and data conventions
@@ -33,24 +37,38 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The app uses `data/campaign_data.csv` when present and otherwise loads `sample_campaign_data.csv`. You can also upload a CSV from the sidebar. Expected columns are `date`, `platform`, `campaign`, `spend`, `impressions`, `clicks`, `orders`, and `revenue`. The loader also accepts the earlier `conversions` column as an alias for `orders`. Optional columns include `currency`, `product`, `region`, `device`, `product_cost`, `refunds`, `discounts`, and `shipping_cost`. Missing currency is assumed to be USD and called out in the data quality panel.
+Normalize the campaign data file after editing it:
+
+```bash
+python scripts/build_campaign_data.py
+python scripts/add_business_summary_keys.py
+```
+
+The app uses an uploaded campaign CSV first, then the canonical `data/campaign_data.csv`. The combined file uses `Combined campaign data` as its source label. Missing region and device values are assigned valid existing categories. Missing product costs are estimated from the median product-cost-to-revenue rate in rows with supplied costs; shipping costs use the median shipping cost per order. Estimated rows are labeled `Estimated` in `data_enrichment_status`. The builder normalizes and enriches the canonical file in place. The loader also accepts `channel`, `ad_spend_usd`, and `revenue_usd` input aliases, and the legacy `conversions` alias for `orders`.
+
+The `data/products.csv` and `data/customer_segments.csv` files power the Products & customer segments page. They include date, channel, and campaign keys. Run `python scripts/add_business_summary_keys.py` to distribute their aggregate totals across the matching campaign rows. This allows date, platform, and campaign filtering while preserving the full totals; individual key-level values are synthetic allocations. Source ROI values are retained where the source does not define their formula.
 
 Metrics include orders, click-to-order rate, average order value, cost per order, ROAS (`revenue / ad spend`), and ROI (`(revenue - ad spend) / ad spend`). Revenue and spend must use the same currency. Zero-spend ratios are shown as unavailable. The sample is illustrative and does not represent actual store performance.
 
 ## Dashboard capabilities
 
-- Shared date, platform, campaign, product, region, device, and single-currency filters.
+Product and customer-segment values are distributed across keyed campaign-grain rows for filtering and are not presented as directly observed attribution.
+
+- Branded Dashboard with a dark title banner, light neutral canvas, six KPI cards with prior-period changes, a weekly revenue/profit chart, data-derived insights, channel performance, and an ad-click-to-order summary.
+- The Dashboard's `Metric Month` multi-select scopes its metrics within the shared date range. Other pages continue to use the shared sidebar filters.
+- Campaign metrics use the canonical combined campaign dataset; product and customer summaries come from their separate aggregate CSVs.
+- Shared date, data source, platform, campaign, product, region, device, and single-currency filters.
 - Equal-length previous-period comparisons for spend, revenue, orders, ROAS, and ROI.
 - Session-level spend budget, revenue goal, ROAS target, and campaign opportunity threshold controls.
 - Campaign flags for high-spend campaigns below target ROAS and low-spend campaigns meeting target ROAS.
-- CSV quality feedback for removed exact duplicates, invalid dates, numeric values defaulted to zero, and repeated date/platform/campaign keys. Preview and download normalized data.
+- CSV quality feedback for removed exact duplicates, invalid dates, numeric values defaulted to zero, and repeated date/platform/campaign keys. The sidebar's cleaned-data preview browses the full normalized file in a scrollable table and shows its row count and date range; the cleaned CSV can be downloaded there too.
 - Downloads for filtered rows, channel summaries, business breakdowns, and campaign opportunities.
-- Estimated contribution profit after ads when product cost and shipping cost are supplied: `revenue - refunds - discounts - product_cost - shipping_cost - ad spend`. This prototype excludes taxes.
-- Tests for sample KPI totals, zero denominators, weighted group metrics, legacy schema support, period comparisons, and selected chart metrics. Run with `python -m unittest discover -s tests`.
+- Estimated contribution profit after ads: `revenue - refunds - discounts - product_cost - shipping_cost - ad spend`. Rows with imputed costs are marked `Estimated`; this prototype excludes taxes.
+- Tests for combined KPI totals, zero denominators, weighted group metrics, legacy schema support, period comparisons, and selected chart metrics. Run with `python -m unittest discover -s tests`.
 
 ## Architecture
 
-Streamlit handles navigation and page rendering. All pages use the same upload, validation, preview, export, and filter helpers. Metric and chart helpers aggregate the filtered rows for dashboard summaries, period comparisons, targets, opportunities, breakdowns, and trends.
+Streamlit handles navigation and page rendering. All pages use the same upload, validation, preview, export, and filter helpers. The cleaned-data preview is available from the sidebar and includes every normalized row, regardless of the Dashboard's Metric Month selection. Metric and chart helpers aggregate the filtered rows for dashboard summaries, period comparisons, targets, opportunities, breakdowns, and trends.
 
 ```mermaid
 flowchart LR
@@ -60,19 +78,26 @@ flowchart LR
     App --> Channel["Channel comparison"]
     App --> Details["Campaign details"]
     App --> Trends["E-commerce trends"]
+    App --> Store["Products & segments"]
 
     Upload["Uploaded CSV"] --> Loader["src/data_loader.py"]
-    Default["data/campaign_data.csv<br/>or sample_campaign_data.csv"] --> Loader
+    Default["data/campaign_data.csv"] --> Builder["scripts/build_campaign_data.py<br/>fill and normalize"]
+    Builder --> Default
+    Default --> Loader
+    ProductData["products.csv"] --> StoreData["src/business_data.py"]
+    SegmentData["customer_segments.csv"] --> StoreData
+    StoreData --> Store
 
     Dash --> Loader
     Overview --> Loader
     Channel --> Loader
     Details --> Loader
     Trends --> Loader
+    Store --> Loader
 
     Loader --> Clean["Validated rows and quality report"]
     Clean --> DataUI["src/data_ui.py<br/>Preview, cleaned-data download"]
-    DataUI --> Filters["src/filters.py<br/>Date, channel, campaign, product, region, device, currency"]
+    DataUI --> Filters["src/filters.py<br/>Date, source, channel, campaign, product, region, device, currency"]
     Filters --> Metrics["src/metrics.py<br/>KPIs, prior period, targets, opportunities"]
     Filters --> Charts["src/charts.py<br/>Selected daily metrics and channel chart"]
     Metrics --> UI["KPIs, pacing, tables, CSV exports"]
@@ -82,7 +107,7 @@ flowchart LR
 
 ## Page request flow
 
-Each page loads the selected source through the shared data UI helper, shows quality feedback and a preview/download option, applies synchronized sidebar filters, and renders its view. The dashboard also compares the selected window with the previous equal-length window and evaluates configured targets.
+Each page loads the selected campaign source through the shared data UI helper, shows quality feedback and a preview/download option, applies synchronized sidebar filters, and renders its view. The Products & customer segments page also reads its keyed summary allocations and applies date, platform, and campaign filters. The dashboard compares the selected window with the previous equal-length window and evaluates configured targets.
 
 ```mermaid
 sequenceDiagram
@@ -115,6 +140,9 @@ sequenceDiagram
 flowchart TD
     CSV["Required fields<br/>date, platform, campaign<br/>spend, impressions, clicks, orders, revenue"]
     Optional["Optional fields<br/>currency, product, region, device<br/>product_cost, refunds, discounts, shipping_cost"]
+    Provenance["source_dataset: Combined campaign data<br/>data_enrichment_status: Provided or Estimated"]
+    ProductSummary["products.csv<br/>product-level keyed allocations"]
+    SegmentSummary["customer_segments.csv<br/>segment-level keyed allocations"]
     Validate["Validate schema and values<br/>Remove exact duplicates and invalid dates<br/>Flag repeated campaign-day keys"]
     Derive["Derive row metrics and<br/>optional contribution estimate"]
     Filter["Apply shared filters<br/>including one currency"]
@@ -123,6 +151,9 @@ flowchart TD
 
     CSV --> Validate
     Optional --> Validate
+    Provenance --> Filter
+    ProductSummary --> Output
+    SegmentSummary --> Output
     Validate --> Derive --> Filter --> Group --> Output
 
     Derive --> ROI["ROI = (revenue - spend) / spend"]
@@ -143,12 +174,15 @@ flowchart TD
 ## Module responsibilities
 
 - `app.py` defines Streamlit navigation and the default page.
-- `src/data_loader.py` loads uploaded or local CSV data, validates fields, normalizes types, and derives row-level metrics.
+- `src/data_loader.py` loads uploaded or local campaign data, normalizes accepted aliases, and derives row-level metrics.
+- `scripts/build_campaign_data.py` fills, normalizes, and estimates missing dimensions and costs in the canonical file.
+- `scripts/add_business_summary_keys.py` allocates the aggregate product and customer-segment totals across campaign date/platform/campaign keys.
+- `src/business_data.py` validates and loads the keyed product and customer-segment allocation CSVs.
 - `src/data_ui.py` provides shared upload, quality feedback, preview, and cleaned-data download controls.
 - `src/filters.py` applies date, platform, campaign, product, region, device, and currency selections.
 - `src/metrics.py` calculates totals, weighted ratios, previous-period comparisons, targets, campaign opportunities, and grouped breakdowns.
 - `src/charts.py` creates selected-metric daily trends and channel comparisons.
-- `pages/` contains the dashboard, overview, channel comparison, campaign details, and trend views.
+- `pages/` contains the dashboard, overview, channel comparison, campaign details, trends, and product/customer-segment summaries.
 - `tests/` contains `unittest` checks for baseline metrics, zero denominators, grouping, filters, schema compatibility, prior-period comparisons, and chart selections.
 
 The data loader accepts the older `conversions` column as an alias for `orders`. Zero denominators produce unavailable ratios. Contribution profit is only available when product-cost and shipping-cost values are complete for the selected rows. Exact duplicate rows are removed; rows with repeated date/platform/campaign keys but different values are flagged for review and retained.
